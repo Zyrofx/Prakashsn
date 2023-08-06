@@ -8,7 +8,7 @@ from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id
 from database.users_chats_db import db
-from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT
+from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK
 from utils import get_settings, get_size, is_subscribed, save_group_settings, temp
 from database.connections_mdb import active_connection
 import re
@@ -24,8 +24,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ Add Me As Admin 👉 Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('Movie Search Group', url= 'https://t.me/MVM_Links'),
-            InlineKeyboardButton('Movie Updates', url='https://t.me/+6Mb-6zj2Gh0xYjhl')
+            InlineKeyboardButton('Movie Search Group', url=CHNL_LNK),
+            InlineKeyboardButton('Movie Updates', url=GRP_LNK)
         ], 
         ]
             
@@ -55,9 +55,8 @@ async def start(client, message):
 
         ], [
 
-            InlineKeyboardButton('Movie Search Group', url= 'https://t.me/MVM_Links'),
-
-            InlineKeyboardButton('Movie Updates', url='https://t.me/+6Mb-6zj2Gh0xYjhl')
+            InlineKeyboardButton('Movie Search Group', url=CHNL_LNK),
+            InlineKeyboardButton('Movie Updates', url=GRP_LNK)
 
         ], 
 
@@ -102,8 +101,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ Add Me As Admin 👉 Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('Movie Search Group', url= 'https://t.me/MVM_Links'),
-            InlineKeyboardButton('Movie Updates', url='https://t.me/+6Mb-6zj2Gh0xYjhl')
+            InlineKeyboardButton('Movie Search Group', url=CHNL_LNK),
+            InlineKeyboardButton('Movie Updates', url=GRP_LNK)
         ], 
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
