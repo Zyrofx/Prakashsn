@@ -30,7 +30,7 @@ logger.setLevel(logging.ERROR)
 BUTTONS = {}
 
 
-@Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
+@Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
    
@@ -713,8 +713,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>┏ 🤴 ᴀsᴋᴇᴅ ʙʏ : {message.from_user.mention} \n┗ 🧡 ᴊᴏɪɴ : 🔗 @cinemaclub_3  \n \n🌩 ᴘᴏᴡᴇʀᴇᴅ ʙʏ \n🔗 @cinemaclub_4 </b>\n \n \n<b>Hᴇʀᴇ ɪs Wʜᴀᴛ I Fᴏᴜɴᴅ Iɴ Mʏ Dᴀᴛᴀʙᴀsᴇ Fᴏʀ Yᴏᴜʀ Qᴜᴇʀʏ {search}.</b>"
-
+        cap = f"Hey 👋 Buddy 😎 \n \n Here Is The Results For #{search}"
 
 
       
@@ -731,9 +730,9 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
         dll=await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(120)
-        fll=await dll.edit_text(f"<b>🗑️ Filter Deleted After 2 Min ‼️ \n 🔍Search Again !!</b>")
-        await asyncio.sleep(120)
+        await asyncio.sleep(86400)
+        fll=await dll.edit_text(f"<b>🗑️ Filter Deleted After 24 Hours ‼️ \n 🔍Search Again !!</b>")
+        await asyncio.sleep(60)
         await fll.delete()
         await message.delete()
     if spoll:
