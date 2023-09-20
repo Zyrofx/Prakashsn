@@ -12,5 +12,5 @@ bs4
 heroku3
 pynewtonmath
 pytz
-aiohttp==3.8.2
+aiohttp
 Flask==2.2.2
