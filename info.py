@@ -38,6 +38,8 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_Files')
 
 # Others
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+EtJMlfV0-EllZjQ1')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+9cBR9CMmM942ZTM1')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001965883968'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TeamEvamaria')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
