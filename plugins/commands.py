@@ -22,10 +22,10 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-            InlineKeyboardButton('➕ Add Me As Admin 👉 Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('⚡ Aᴅᴅ  Mᴇ  Tᴏ  Yᴏᴜʀ  Gʀᴏᴜᴘ  ⚡', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('Movie Search Group', url=CHNL_LNK),
-            InlineKeyboardButton('Movie Updates', url=GRP_LNK)
+            InlineKeyboardButton('⚜️ Join  Movie  Request  Group ⚜️', url=CHNL_LNK),
+            InlineKeyboardButton('🎬 Join  Movie  Updates Channel 🎬', url=GRP_LNK)
         ], 
         ]
             
@@ -51,12 +51,12 @@ async def start(client, message):
             
             
 
-            InlineKeyboardButton('➕ Add Me As Admin 👉 Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('⚡ Aᴅᴅ  Mᴇ  Tᴏ  Yᴏᴜʀ  Gʀᴏᴜᴘ  ⚡', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
 
         ], [
 
-            InlineKeyboardButton('Movie Search Group', url=CHNL_LNK),
-            InlineKeyboardButton('Movie Updates', url=GRP_LNK)
+            InlineKeyboardButton('⚜️ Join  Movie  Request  Group ⚜️', url=CHNL_LNK),
+            InlineKeyboardButton('🎬 Join  Movie  Updates Channel 🎬', url=GRP_LNK)
 
         ], 
 
@@ -99,10 +99,10 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕ Add Me As Admin 👉 Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('⚡ Aᴅᴅ  Mᴇ  Tᴏ  Yᴏᴜʀ  Gʀᴏᴜᴘ  ⚡', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('Movie Search Group', url=CHNL_LNK),
-            InlineKeyboardButton('Movie Updates', url=GRP_LNK)
+            InlineKeyboardButton('⚜️ Join  Movie  Request  Group ⚜️', url=CHNL_LNK),
+            InlineKeyboardButton('🎬 Join  Movie  Updates Channel 🎬', url=GRP_LNK)
         ], 
         ]
         reply_markup = InlineKeyboardMarkup(buttons)
