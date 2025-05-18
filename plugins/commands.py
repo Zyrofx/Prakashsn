@@ -24,7 +24,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('⚡ Aᴅᴅ  Mᴇ  Tᴏ  Yᴏᴜʀ  Gʀᴏᴜᴘ  ⚡', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('⚜️ Join  Movie  Request  Group ⚜️', url=CHNL_LNK),
+            InlineKeyboardButton('⚜️ Join  Movie  Request  Group ⚜️', url=CHNL_LNK)
+        ], [
             InlineKeyboardButton('🎬 Join  Movie  Updates Channel 🎬', url=GRP_LNK)
         ], 
         ]
@@ -55,7 +56,8 @@ async def start(client, message):
 
         ], [
 
-            InlineKeyboardButton('⚜️ Join  Movie  Request  Group ⚜️', url=CHNL_LNK),
+            InlineKeyboardButton('⚜️ Join  Movie  Request  Group ⚜️', url=CHNL_LNK)
+        ], [
             InlineKeyboardButton('🎬 Join  Movie  Updates Channel 🎬', url=GRP_LNK)
 
         ], 
@@ -101,7 +103,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('⚡ Aᴅᴅ  Mᴇ  Tᴏ  Yᴏᴜʀ  Gʀᴏᴜᴘ  ⚡', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('⚜️ Join  Movie  Request  Group ⚜️', url=CHNL_LNK),
+            InlineKeyboardButton('⚜️ Join  Movie  Request  Group ⚜️', url=CHNL_LNK)
+        ], [
             InlineKeyboardButton('🎬 Join  Movie  Updates Channel 🎬', url=GRP_LNK)
         ], 
         ]
