@@ -138,7 +138,7 @@ async def advantage_spoll_choker(bot, query):
             await auto_filter(bot, query, k)
         else:
             k = await query.message.edit(f"❝ 𝖧𝖾𝗒 {query.from_user.mention}, \n \n താഴെ ഉള്ള കാര്യങ്ങൾ ശ്രദ്ധിക്കുക ❞ \n \n 🔹കറക്റ്റ് സ്പെല്ലിംഗിൽ ചോദിക്കുക. (ഇംഗ്ലീഷിൽ മാത്രം) \n \n 🔸സിനിമകൾ ഇംഗ്ലീഷിൽ Type ചെയ്ത് മാത്രം ചോദിക്കുക. \n \n  🔹OTT റിലീസ് ആകാത്ത സിനിമകൾ ചോദിക്കരുത്. \n \n 🔸സിനിമയുടെ പേര് [വർഷം ഭാഷ] ഈ രീതിയിൽ ചോദിക്കുക. \n \n  🔹സിനിമ Request ചെയ്യുമ്പോൾ Symbols ഒഴിവാക്കുക. [+:;'*!-&.. etc")
-            await asyncio.sleep(10)
+            await asyncio.sleep(60)
             await k.delete()
            
 
@@ -733,9 +733,9 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
         dll=await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(60)
+        await asyncio.sleep(120)
         fll=await dll.edit_text(f"<b>🗑️ Filter Deleted After 1 Min ‼️ \n 🔍Search Again !!</b>")
-        await asyncio.sleep(60)
+        await asyncio.sleep(120)
         await fll.delete()
         await message.delete()
     if spoll:
@@ -752,7 +752,7 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         k = await msg.reply(f"❝ 𝖧𝖾𝗒 {msg.from_user.mention}, \n \n താഴെ ഉള്ള കാര്യങ്ങൾ ശ്രദ്ധിക്കുക ❞ \n \n 🔹കറക്റ്റ് സ്പെല്ലിംഗിൽ ചോദിക്കുക. (ഇംഗ്ലീഷിൽ മാത്രം) \n \n 🔸സിനിമകൾ ഇംഗ്ലീഷിൽ Type ചെയ്ത് മാത്രം ചോദിക്കുക. \n \n  🔹OTT റിലീസ് ആകാത്ത സിനിമകൾ ചോദിക്കരുത്. \n \n 🔸സിനിമയുടെ പേര് [വർഷം ഭാഷ] ഈ രീതിയിൽ ചോദിക്കുക. \n \n  🔹സിനിമ Request ചെയ്യുമ്പോൾ Symbols ഒഴിവാക്കുക. [+:;'*!-&.. etc")
-        await asyncio.sleep(8)
+        await asyncio.sleep(60)
         await k.delete()
         await msg.delete()
         return
@@ -782,7 +782,7 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply(f"❝ 𝖧𝖾𝗒 {msg.from_user.mention}, \n \n താഴെ ഉള്ള കാര്യങ്ങൾ ശ്രദ്ധിക്കുക ❞ \n \n 🔹കറക്റ്റ് സ്പെല്ലിംഗിൽ ചോദിക്കുക. (ഇംഗ്ലീഷിൽ മാത്രം) \n \n 🔸സിനിമകൾ ഇംഗ്ലീഷിൽ Type ചെയ്ത് മാത്രം ചോദിക്കുക. \n \n  🔹OTT റിലീസ് ആകാത്ത സിനിമകൾ ചോദിക്കരുത്. \n \n 🔸സിനിമയുടെ പേര് [വർഷം ഭാഷ] ഈ രീതിയിൽ ചോദിക്കുക. \n \n  🔹സിനിമ Request ചെയ്യുമ്പോൾ Symbols ഒഴിവാക്കുക. [+:;'*!-&.. etc")
-        await asyncio.sleep(10)
+        await asyncio.sleep(60)
         await k.delete()
         await msg.delete()
         return
@@ -796,7 +796,7 @@ async def advantage_spell_chok(msg):
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     dll= await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
                     reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(10)
+    await asyncio.sleep(60)
     await dll.delete()
     await msg.delete()
 
@@ -823,7 +823,7 @@ async def manual_filters(client, message, text=False):
                                 reply_text, 
                                 disable_web_page_preview=True,
                                 reply_to_message_id=reply_id)
-                            await asyncio.sleep(30)
+                            await asyncio.sleep(60)
 
                             await dm.delete()
 
@@ -837,7 +837,7 @@ async def manual_filters(client, message, text=False):
                                 reply_markup=InlineKeyboardMarkup(button),
                                 reply_to_message_id=reply_id
                             )
-                            await asyncio.sleep(30)
+                            await asyncio.sleep(60)
                             await dm.delete()
                             await message.delete()
                     elif btn == "[]":
@@ -847,7 +847,7 @@ async def manual_filters(client, message, text=False):
                             caption=reply_text or "",
                             reply_to_message_id=reply_id
                         )
-                        await asyncio.sleep(30)
+                        await asyncio.sleep(60)
                         await dm.delete()
                         await message.delete()
                     else:
@@ -858,7 +858,7 @@ async def manual_filters(client, message, text=False):
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
-                        await asyncio.sleep(30)
+                        await asyncio.sleep(60)
                         await dm.delete()
                         await message.delete()
                 except Exception as e:
