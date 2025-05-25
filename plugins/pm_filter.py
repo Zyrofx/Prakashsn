@@ -745,13 +745,29 @@ async def auto_filter(client, msg, spoll=False):
 async def advantage_spell_chok(msg):
     query = re.sub(
         r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)",
-        "", msg.text, flags=re.IGNORECASE)  # plis contribute some common words
+        "", msg.text, flags=re.IGNORECASE
+    )
     query = query.strip() + " movie"
     g_s = await search_gagala(query)
     g_s += await search_gagala(msg.text)
     gs_parsed = []
+
     if not g_s:
-        k = await msg.reply(f"❝ 𝖧𝖾𝗒 {msg.from_user.mention}, \n \n താഴെ ഉള്ള കാര്യങ്ങൾ ശ്രദ്ധിക്കുക ❞ \n \n 🔹കറക്റ്റ് സ്പെല്ലിംഗിൽ ചോദിക്കുക. (ഇംഗ്ലീഷിൽ മാത്രം) \n \n 🔸സിനിമകൾ ഇംഗ്ലീഷിൽ Type ചെയ്ത് മാത്രം ചോദിക്കുക. \n \n  🔹OTT റിലീസ് ആകാത്ത സിനിമകൾ ചോദിക്കരുത്. \n \n 🔸സിനിമയുടെ പേര് [വർഷം ഭാഷ] ഈ രീതിയിൽ ചോദിക്കുക. \n \n  🔹സിനിമ Request ചെയ്യുമ്പോൾ Symbols ഒഴിവാക്കുക. [+:;'*!-&.. etc")
+        # Create Google search button
+        google_query = msg.text.replace(" ", "+")
+        button = [[
+            InlineKeyboardButton("🔎 Check on Google", url=f"https://www.google.com/search?q={google_query}")
+        ]]
+        k = await msg.reply(
+            f"❝ 𝖧𝖾𝗒 {msg.from_user.mention}, \n\n"
+            "താഴെ ഉള്ള കാര്യങ്ങൾ ശ്രദ്ധിക്കുക ❞ \n\n"
+            "🔹കറക്റ്റ് സ്പെല്ലിംഗിൽ ചോദിക്കുക. (ഇംഗ്ലീഷിൽ മാത്രം) \n\n"
+            "🔸സിനിമകൾ ഇംഗ്ലീഷിൽ Type ചെയ്ത് മാത്രം ചോദിക്കുക. \n\n"
+            "🔹OTT റിലീസ് ആകാത്ത സിനിമകൾ ചോദിക്കരുത്. \n\n"
+            "🔸സിനിമയുടെ പേര് [വർഷം ഭാഷ] ഈ രീതിയിൽ ചോദിക്കുക. \n\n"
+            "🔹സിനിമ Request ചെയ്യുമ്പോൾ Symbols ഒഴിവാക്കുക. [+:;'*!-&.. etc]",
+            reply_markup=InlineKeyboardMarkup(button)
+        )
         await asyncio.sleep(60)
         await k.delete()
         await msg.delete()
